@@ -14,7 +14,7 @@ module.exports = {
     siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
     siteLanguage: `de`,
     siteImage: `/banner.jpg`,
-    author: `@lekoarts_de`,
+    author: `@ebner`,
   },
   plugins: [
     {
