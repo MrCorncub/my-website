@@ -75,10 +75,25 @@ Schussendlich muss nur mehr der iframe-Container aufgerufen werden und das Scrip
 
 Um zu zeigen, dass der Code auch funktioniert, habe ich noch ein Video eingebettet. Viel Spaß!
 
-<script src="./YoutubePlayer.js"></script>
-<iframe id="player" type="text/html" width="700" height="400"
-  src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
-  frameborder="0"></iframe>
+
+
+<div class="videoWrapper" style="
+        position: relative;
+       	padding-bottom: 56.25%;
+       	padding-top: 25px;
+       	height: 0;"
+>
+<iframe id="player"
+        src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
+        frameborder="0"
+        style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+  "></iframe>
+</div>
 
 Credits:
 [Blog Eintrag](https://dev.to/dance2die/youtube-iframe-api-yt-player-is-not-a-constructor-pa6),

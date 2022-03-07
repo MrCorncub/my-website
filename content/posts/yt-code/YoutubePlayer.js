@@ -34,13 +34,3 @@ function loadVideo() {
     console.log(videoStatuses.find(status => status[1] === event.data)[0]);
   }
 }
-
-if (document.readyState !== "loading") {
-  console.info(`document.readyState ==>`, document.readyState);
-  loadVideo();
-} else {
-  document.addEventListener("DOMContentLoaded", function() {
-    console.info(`DOMContentLoaded ==>`, document.readyState);
-    loadVideo();
-  });
-}
