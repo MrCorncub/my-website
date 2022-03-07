@@ -11,11 +11,11 @@ function loadVideo() {
     tag.onload = setupPlayer;
   })();
 
+  let player = null;
 
   function setupPlayer() {
-
     window.YT.ready(function() {
-      new window.YT.Player("video", {
+      player = new window.YT.Player("video", {
         height: "390",
         width: "640",
         videoId: "NUYvbT6vTPs",
