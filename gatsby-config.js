@@ -10,7 +10,7 @@ module.exports = {
     siteTitle: `Bernhard Ebner`,
     siteTitleAlt: `Bernhard Ebner`,
     siteHeadline: `Bernhard Ebner`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
+    siteUrl: `https://bebner.eu`,
     siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
     siteLanguage: `de`,
     siteImage: `/banner.jpg`,
@@ -31,8 +31,8 @@ module.exports = {
             slug: `/about`,
           },
           {
-            title: `Rechtliches`,
-            slug: `/rechtliches`,
+            title: `Impressum`,
+            slug: `/impressum`,
           },
         ],
         externalLinks: [
@@ -69,7 +69,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `bernhard-ebner`,
+        short_name: `Bernhard Ebner`,
         description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
         start_url: `/`,
         background_color: `#fff`,
