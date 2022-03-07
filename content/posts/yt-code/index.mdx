@@ -1,0 +1,82 @@
+---
+title: Youtube JavaScript API, um Videos abzuspielen
+date: 2022-04-07
+description: Youtube iFrame API in JavaScript
+tags:
+  - Youtube
+  - JavaScript
+  - API
+---
+
+![Youtube Logo](./yt-logo.png)
+
+Youtube stellt mit der Youtube-iFrame API, die Möglichkeit zur Verfügen, Videos in die eigene Website einzubetten.
+Der Code ist straight-forward und benötigt nicht viel Zeit, um ihn zu implementieren.
+
+Als erster Schritt wird eine JavaScript-Datei erstellt, die die Logik und den API-Call enthält/ausführt.
+
+```js
+function loadVideo() {
+
+  (function loadYoutubeIFrameApiScript() {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+
+    const firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    tag.onload = setupPlayer;
+  })();
+
+  function setupPlayer() {
+    window.YT.ready(function() {
+      new window.YT.Player("video", {
+        height: "400",
+        width: "700",
+        videoId: "NUYvbT6vTPs",
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange
+        }
+      });
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+  function onPlayerStateChange(event) {
+    var videoStatuses = Object.entries(window.YT.PlayerState);
+    console.log(videoStatuses.find(status => status[1] === event.data)[0]);
+  }
+}
+
+if (document.readyState !== "loading") {
+  console.info(`document.readyState ==>`, document.readyState);
+  loadVideo();
+} else {
+  document.addEventListener("DOMContentLoaded", function() {
+    console.info(`DOMContentLoaded ==>`, document.readyState);
+    loadVideo();
+  });
+}
+
+```
+
+Schussendlich muss nur mehr der div-Container aufgerufen werden, und das Script, dass den Code enthält.
+
+```
+<div id="video"></div>
+<script src="./YoutubePlayer.js"></script>
+```
+
+Um zu zeigen, dass der Code auch funktioniert, habe ich noch ein Video eingebettet. Viel Spaß!
+
+<div id="video"></div>
+<script src="./YoutubePlayer.js"></script>
+
+
+Credits:
+[Blog Eintrag](https://dev.to/dance2die/youtube-iframe-api-yt-player-is-not-a-constructor-pa6),
+[Youtube iFrame API](https://developers.google.com/youtube/iframe_api_reference?hl=de)
