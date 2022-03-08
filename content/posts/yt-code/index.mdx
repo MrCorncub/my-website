@@ -1,89 +1,41 @@
 ---
-title: Youtube JavaScript API, um Videos abzuspielen
+title: Youtube Videos in die eigene Website einbinden
 date: 2022-04-07
-description: Youtube iFrame API in JavaScript
+description: Youtube iFrame API
 tags:
   - Youtube
   - JavaScript
   - API
+  - iframe
 ---
 
-![Youtube Logo](./yt-logo.png)
+![Youtube Logo](./yt-logo_new.jpg)
 
 Youtube stellt mit der Youtube-iFrame API, die Möglichkeit zur Verfügen, Videos in die eigene Website einzubetten.
-Der Code ist straight-forward und benötigt nicht viel Zeit, um ihn zu implementieren.
+Der Code ist straight-forward und benötigt nicht viel Zeit, um ihn zu implementieren. Die Dokumentation befindet sich
+[hier](https://developers.google.com/youtube/iframe_api_reference?hl=de).
 
-Als erster Schritt wird eine JavaScript-Datei erstellt, die die Logik und den API-Call enthält/ausführt.
-
-```js
-function loadVideo() {
-
-  (function loadYoutubeIFrameApiScript() {
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-
-    const firstScriptTag = document.getElementsByTagName("script")[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    tag.onload = setupPlayer;
-  })();
-
-  function setupPlayer() {
-    window.YT.ready(function() {
-      new window.YT.Player("video", {
-        height: "400",
-        width: "700",
-        videoId: "NUYvbT6vTPs",
-        events: {
-          onReady: onPlayerReady,
-          onStateChange: onPlayerStateChange
-        }
-      });
-    });
-  }
-
-  function onPlayerReady(event) {
-    event.target.playVideo();
-  }
-
-  function onPlayerStateChange(event) {
-    var videoStatuses = Object.entries(window.YT.PlayerState);
-    console.log(videoStatuses.find(status => status[1] === event.data)[0]);
-  }
-}
-
-if (document.readyState !== "loading") {
-  console.info(`document.readyState ==>`, document.readyState);
-  loadVideo();
-} else {
-  document.addEventListener("DOMContentLoaded", function() {
-    console.info(`DOMContentLoaded ==>`, document.readyState);
-    loadVideo();
-  });
-}
+Es geht auch einfacher, indem ein iFrame-Element benutzt wird. Dieses Element bekommt das Attribut src, dass den Youtube-Link beinhalten soll.
 
 ```
-
-Schussendlich muss nur mehr der iframe-Container aufgerufen werden und das Script, dass den Code enthält.
-
-```
-<script src="./YoutubePlayer.js"></script>
-<iframe id="player" type="text/html" width="700" height="400"
-  src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
-  frameborder="0"></iframe>
+<iframe id="player"
+     src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
+     frameborder="0"
+></iframe>
 ```
 
-Um zu zeigen, dass der Code auch funktioniert, habe ich noch ein Video eingebettet. Viel Spaß!
+Soweit so gut, jedoch gibt es noch ein einziges Problem. Das iframe-Element ist nicht responsive/dynamisch. Das Element soll sich automatisch
+auf die Bildschirmbreite anpassen, das es zur Zeit nicht tut. Hier kommt CSS ins Spiel, dass den Style des Elements vorgibt und dafür sorgt, dass das Design
+am Smartphone oder Computer gleich aussieht.
 
-
-
+```
 <div class="videoWrapper" style="
         position: relative;
        	padding-bottom: 56.25%;
        	padding-top: 25px;
-       	height: 0;"
->
-<iframe id="player"
+       	height: 0;">
+
+  <iframe id="player"
         src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
         frameborder="0"
         style="
@@ -91,10 +43,38 @@ Um zu zeigen, dass der Code auch funktioniert, habe ich noch ein Video eingebett
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-  "></iframe>
-</div>
+            height: 100%;">
+  </iframe>
 
-Credits:
-[Blog Eintrag](https://dev.to/dance2die/youtube-iframe-api-yt-player-is-not-a-constructor-pa6),
+</div>
+```
+
+Falls du es selbst ausprobieren möchtest und keine Website zur Verfügung hast, kannst du in dieser
+[Sandbox-Umgebung](https://jsfiddle.net/omarjuvera/8zkunqxy/2/) den Code testen und verändern.
+
+
+Um zu zeigen, dass der Code auch funktioniert, habe ich noch ein Video eingebettet. <Text sx={{ fontSize: [1, 2, 2], fontWeight: `bold`, color: `heading` }}>Viel Spaß!</Text>
+
+<div class="videoWrapper" style="
+        position: relative;
+       	padding-bottom: 56.25%;
+       	padding-top: 25px;
+       	height: 0;">
+
+  <iframe id="player"
+        src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
+        frameborder="0"
+        style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;">
+  </iframe>
+
+</div>
+<br/>
+
+Credits <br/>
+[Blog Eintrag](https://dev.to/dance2die/youtube-iframe-api-yt-player-is-not-a-constructor-pa6)<br/>
 [Youtube iFrame API](https://developers.google.com/youtube/iframe_api_reference?hl=de)
