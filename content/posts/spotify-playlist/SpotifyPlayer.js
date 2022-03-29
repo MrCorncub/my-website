@@ -6,6 +6,7 @@
  *
  * @author Alexander Wallin <office@alexanderwallin.com>
  * @see https://developer.spotify.com/technologies/widgets/spotify-play-button/
+ * import SpotifyPlayer from "./SpotifyPlayer";
  */
 
 import * as React from "react"
