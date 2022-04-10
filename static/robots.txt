@@ -1,4 +1,3 @@
 User-agent: *
-Allow: /
-
-sitemap: https://bebner.eu/rss.xml
+Disallow:
+Sitemap: https://bebner.eu/rss.xml
