@@ -11,7 +11,7 @@ module.exports = {
     siteTitleAlt: `Bernhard Ebner`,
     siteHeadline: `Bernhard Ebner`,
     siteUrl: `https://bebner.eu`,
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    siteDescription: `Hallo ich bin Bernhard Ebner und auf dieser Seite erzähle ich etwas über mich.`,
     siteLanguage: `de`,
     siteImage: `/banner.jpg`,
     author: `@ebner`,
@@ -68,9 +68,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
+        name: `Bernhard Ebner`,
         short_name: `Bernhard Ebner`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        description: `Hallo ich bin Bernhard Ebner und auf dieser Seite erzähle ich etwas über mich.`,
         start_url: `/`,
         background_color: `#fff`,
         // This will impact how browsers show your PWA/website
