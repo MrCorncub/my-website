@@ -75,31 +75,31 @@ SNMP-Agent installiert/aktiviert, der die Daten gesammelt an die Management-Soft
 
 Das SNMP-Protokoll hat sich über die Jahre weiterentwickelt und liegt mittlerweile in der Version 3 vor [3].
 
-<Text sx={{ fontSize: [0.5,1,2], fontWeight: `bold`, color: `heading` }}>
+<Text sx={{ fontSize: [1,1,2], fontWeight: `bold`, color: `heading` }}>
 2.1.1.1 | SNMPv1
 </Text>
 
 SNMPv1 ist die erste Version des SNMP-Protokolls und bietet die Basis für die Kommunikation im Agenten-Manger-Modell. SNMPv1 ist als unsicher zu betrachten, da die SNMP-Pakte unverschlüsselt über das Netzwerk geschickt werden. Version 1 bietet als einzigen Sicherheitsmechanismus einen Community-String, welche wie ein Passwort funktioniert, um auf die Daten der Netzwerkgeräte zugreifen zu können. Der Community-String wird jedoch in Klartext übertragen und ist somit nicht sicher [4].
 
-<Text sx={{ fontSize: [0.5,1,2], fontWeight: `bold`, color: `heading` }}>
+<Text sx={{ fontSize: [1,1,2], fontWeight: `bold`, color: `heading` }}>
 2.1.1.2	| SNMPv2
 </Text>
 
 SNMPv2 setzt auf Version 1 auf und bietet optimierte Fehlerbehandlungen, Abfragen mehrerer Daten in einem einzelnen Request, Manger-zu-Manger-Kommunikation sowie angepasste Kommandos, an. Der Community-String wird in dieser Version verschlüsselt und es werden Benutzernamen eingeführt, um die Sicherheit zu erhöhen [5].
 
-<Text sx={{ fontSize: [0.5,1,2], fontWeight: `bold`, color: `heading` }}>
+<Text sx={{ fontSize: [1,1,2], fontWeight: `bold`, color: `heading` }}>
 2.1.1.3	| SNMPv3
 </Text>
 
 SNMPv3 ist die aktuelle Version und fokussiert sich hauptsächlich auf den Sicherheitsaspekt, der in ersten beiden Versionen vernachlässigt wurde. Der Community-String wurde durch einen Usernamen und Password ersetzt und die übertragenen SNMP-Pakte werden nun ebenfalls verschlüsselt [6].
 
-<Text sx={{ fontSize: [0.5,2,3], fontWeight: `bold`, color: `heading` }}>
+<Text sx={{ fontSize: [1,2,3], fontWeight: `bold`, color: `heading` }}>
 2.1.2 | Network Configuration Protocol (NETCONF)
 </Text>
 
 Das NETCONF-Protokoll ist ein weiterer Schritt in Richtung automatisiertes Netzwerkmonitoring. Das Protokoll basiert auf XML-Files und kann mit sogenannten XML-RPC (Remote Procedure Calls) Daten austauschen. Das Protokoll verfügt über Installations-, Manipulations- und Lösch-Mechanismen für unterstützte Netzwerkkomponenten. Ein großer Vorteil von NETCONF sind die Konfigurationsänderungen durch Transaktionen, an denen mehrere Komponenten beteiligt sein können [7].
 
-<Text sx={{ fontSize: [0.5,2,3], fontWeight: `bold`, color: `heading` }}>
+<Text sx={{ fontSize: [1,2,3], fontWeight: `bold`, color: `heading` }}>
 2.1.3 | Netflow
 </Text>
 
