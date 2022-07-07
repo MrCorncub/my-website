@@ -44,6 +44,10 @@ module.exports = {
             name: `Spotify`,
             url: `https://open.spotify.com/user/ebner.bernhard98?si=ARuHJs0yTMyoziouOkj4IQ`,
           },
+          {
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/bernhard-ebner-9b7238222/`,
+          },
         ],
       },
     },
