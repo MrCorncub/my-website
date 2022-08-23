@@ -23,6 +23,10 @@ module.exports = {
       options: {
         navigation: [
           {
+            title: `Startseite`,
+            slug: `/`,
+          },
+          {
             title: `Blog`,
             slug: `/blog`,
           },
@@ -30,20 +34,8 @@ module.exports = {
             title: `About`,
             slug: `/about`,
           },
-          {
-            title: `Impressum`,
-            slug: `/impressum`,
-          },
         ],
         externalLinks: [
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/invites/contact/?i=1wr9prx3ylt73&utm_content=6kxlph`,
-          },
-          {
-            name: `Spotify`,
-            url: `https://open.spotify.com/user/ebner.bernhard98?si=ARuHJs0yTMyoziouOkj4IQ`,
-          },
           {
             name: `LinkedIn`,
             url: `https://www.linkedin.com/in/bernhard-ebner-9b7238222/`,
