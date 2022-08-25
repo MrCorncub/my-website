@@ -36,10 +36,10 @@ module.exports = {
           },
         ],
         externalLinks: [
-          {
+         /* {
             name: `LinkedIn`,
             url: `https://www.linkedin.com/in/bernhard-ebner-9b7238222/`,
-          },
+          },*/
         ],
       },
     },
