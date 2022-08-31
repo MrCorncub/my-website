@@ -11,7 +11,7 @@ module.exports = {
     siteTitleAlt: `Bernhard Ebner`,
     siteHeadline: `Bernhard Ebner`,
     siteUrl: `https://bebner.eu`,
-    siteDescription: `Hallo ich bin Bernhard Ebner und auf dieser Seite erzähle ich etwas über mich.`,
+    siteDescription: `Hallo ich bin Bernhard Ebner und Informatiker auf dieser Seite erzähle ich etwas über mich.`,
     siteLanguage: `de`,
     siteImage: `/banner.jpg`,
     author: `@ebner`,
@@ -64,7 +64,7 @@ module.exports = {
       options: {
         name: `Bernhard Ebner`,
         short_name: `Bernhard Ebner`,
-        description: `Hallo ich bin Bernhard Ebner und auf dieser Seite erzähle ich etwas über mich.`,
+        description: `Hallo ich bin Bernhard Ebner und Informatiker auf dieser Seite erzähle ich etwas über mich.`,
         start_url: `/`,
         background_color: `#fff`,
         // This will impact how browsers show your PWA/website
