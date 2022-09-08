@@ -11,7 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="propeller" content="35a7b3b1fe48af9a9a87d8dae578c6a3">
+        <meta name="propeller" content="35a7b3b1fe48af9a9a87d8dae578c6a3"/>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
