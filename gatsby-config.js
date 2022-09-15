@@ -44,6 +44,13 @@ module.exports = {
       },
     },
     {
+        resolve: `gatsby-plugin-nprogress`,
+        options: {
+          color: `white`,
+          showSpinner: true,
+        },
+      },
+    {
       resolve: `gatsby-omni-font-loader`,
       options: {
         enableListener: true,
