@@ -2,6 +2,9 @@ require(`dotenv`).config()
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
@@ -16,6 +19,7 @@ module.exports = {
     siteImage: `/banner.jpg`,
     author: `@ebner`,
   },
+  trailingSlash: `never`,
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
@@ -51,21 +55,11 @@ module.exports = {
         },
       },
     {
-      resolve: `gatsby-omni-font-loader`,
+      resolve: `gatsby-plugin-sitemap`,
       options: {
-        enableListener: true,
-        preconnect: [`https://fonts.gstatic.com`],
-        // If you plan on changing the font you'll also need to adjust the Theme UI config to edit the CSS
-        // See: https://github.com/LekoArts/gatsby-themes/tree/main/examples/minimal-blog#changing-your-fonts
-        web: [
-          {
-            name: `IBM Plex Sans`,
-            file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap`,
-          },
-        ],
+        output: `/`,
       },
     },
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -123,25 +117,22 @@ module.exports = {
                   custom_elements: [{ "content:encoded": content }],
                 }
               }),
-            query: `
-              {
-                allPost(sort: { fields: date, order: DESC }) {
-                  nodes {
-                    title
-                    date(formatString: "MMMM D, YYYY")
-                    excerpt
-                    slug
-                  }
-                }
-              }
-            `,
+            query: `{
+          allPost(sort: {date: DESC}) {
+            nodes {
+              title
+              date(formatString: "MMMM D, YYYY")
+              excerpt
+              slug
+            }
+          }
+        }`,
             output: `rss.xml`,
             title: `Bernhard Ebner`,
           },
         ],
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
