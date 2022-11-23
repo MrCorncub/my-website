@@ -17,7 +17,7 @@ Der Code ist straight-forward und benötigt nicht viel Zeit, um ihn zu implement
 
 Es geht auch einfacher, indem ein iFrame-Element benutzt wird. Dieses Element bekommt das Attribut src, dass den Youtube-Link beinhalten soll.
 
-```
+```html
 <iframe id="player"
      src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
      frameborder="0"
@@ -28,7 +28,7 @@ Soweit so gut, jedoch gibt es noch ein einziges Problem. Das iframe-Element ist 
 auf die Bildschirmbreite anpassen, das es zur Zeit nicht tut. Hier kommt CSS ins Spiel, dass den Style des Elements vorgibt und dafür sorgt, dass das Design
 am Smartphone oder Computer gleich aussieht.
 
-```
+```html
 <div class="videoWrapper" style="
         position: relative;
        	padding-bottom: 56.25%;
@@ -54,21 +54,21 @@ Falls du es selbst ausprobieren möchtest und keine Website zur Verfügung hast,
 
 Um zu zeigen, dass der Code auch funktioniert, habe ich noch ein Video eingebettet. <Text sx={{ fontSize: [1, 2, 2], fontWeight: `bold`, color: `heading` }}>Viel Spaß!</Text>
 
-<div class="videoWrapper" style="
-        position: relative;
-       	padding-bottom: 56.25%;
-       	padding-top: 25px;
-       	height: 0;">
+<div class="videoWrapper" style={{
+        position: 'relative',
+       	paddingBottom: '56.25%',
+       	paddingTop: '25px',
+       	height: 0}}>
 
   <iframe id="player"
         src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
         frameborder="0"
-        style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;">
+        style={{
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            width: '100%',
+            height: '100%'}}>
   </iframe>
 
 </div>
