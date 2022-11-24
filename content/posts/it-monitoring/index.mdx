@@ -37,12 +37,12 @@ Deswegen ist es für (IT-)Unternehmen extrem wichtig, sich mit IT Monitoring aus
 In diesem Blogeintrag werden die Eigenschaften, Protokolle und diverse Lösungen für das IT Monitoring aufgezeigt.
 Abschließend werden anhand eines Praxisbeispiels die Grundfunktionalitäten des IT Monitoringsystems Checkmk erläutert.
 
-<Text style={{ fontSize: '4vw', fontWeight: 'bold', color: 'heading' }}>2 | IT Monitoring Grundlagen</Text>
+# 2 | IT Monitoring Grundlagen
 
 In diesem Kapitel werden die wichtigsten IT Monitoring-Grundlagen erklärt.
 Dabei wird Bezug auf das SNMP-Protokoll genommen.
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>2.1 | IT Monitoring Protokolle / Techniken</Text>
+## 2.1 | IT Monitoring Protokolle / Techniken
 
 Beim IT Monitoring werden üblicherweise Protokolle verwendet, welche möglichst wenig Netzwerkbandbreite erfordern.
 Die meisten Endgeräte unterstützen ein oder mehrere IT Monitoring Protokolle. Bei Linux kommt SNMP und auch CLI zum Einsatz,
@@ -52,7 +52,7 @@ SNMP ist dabei eines der weitverbreitetsten Protokolle und wird von vielen gäng
 unterstützt. Jedoch gibt es noch eine Vielzahl an anderen Protokollen wie NETCONF und Netflow, die in den nachfolgenden
 Unterkapiteln noch genauer beschrieben werden.
 
-<Text style={{ fontSize: '2vw', fontWeight: 'bold', color: 'heading' }}>2.1.1 | Simple Network Management Protocol (SNMP)</Text>
+### 2.1.1 | Simple Network Management Protocol (SNMP)
 
 Die erste SNMP Version wurde 1990 auf den Markt gebracht und wird bis heute ständig weiterentwickelt.
 Die Kernfunktionalität gewährleistet eine zentrale Überwachung und auch Steuerung der Netzwerkkomponenten einer
@@ -67,27 +67,27 @@ SNMP-Agent installiert/aktiviert, der die Daten gesammelt an die Management-Soft
 
 Das SNMP-Protokoll hat sich über die Jahre weiterentwickelt und liegt mittlerweile in der Version 3 vor [3].
 
-<Text sstyle={{ fontSize: '1vw', fontWeight: 'bold', color: 'heading' }}>2.1.1.1 | SNMPv1</Text>
+### 2.1.1.1 | SNMPv1
 
 SNMPv1 ist die erste Version des SNMP-Protokolls und bietet die Basis für die Kommunikation im Agenten-Manger-Modell. SNMPv1 ist als unsicher zu betrachten, da die SNMP-Pakte unverschlüsselt über das Netzwerk geschickt werden. Version 1 bietet als einzigen Sicherheitsmechanismus einen Community-String, welche wie ein Passwort funktioniert, um auf die Daten der Netzwerkgeräte zugreifen zu können. Der Community-String wird jedoch in Klartext übertragen und ist somit nicht sicher [4].
 
-<Text style={{ fontSize: '1vw', fontWeight: 'bold', color: 'heading' }}>2.1.1.2	| SNMPv2</Text>
+### 2.1.1.2	| SNMPv2
 
 SNMPv2 setzt auf Version 1 auf und bietet optimierte Fehlerbehandlungen, Abfragen mehrerer Daten in einem einzelnen Request, Manger-zu-Manger-Kommunikation sowie angepasste Kommandos, an. Der Community-String wird in dieser Version verschlüsselt und es werden Benutzernamen eingeführt, um die Sicherheit zu erhöhen [5].
 
-<Text style={{ fontSize: '1vw', fontWeight: 'bold', color: 'heading' }}>2.1.1.3	| SNMPv3</Text>
+### 2.1.1.3	| SNMPv3
 
 SNMPv3 ist die aktuelle Version und fokussiert sich hauptsächlich auf den Sicherheitsaspekt, der in ersten beiden Versionen vernachlässigt wurde. Der Community-String wurde durch einen Usernamen und Password ersetzt und die übertragenen SNMP-Pakte werden nun ebenfalls verschlüsselt [6].
 
-<Text style={{ fontSize: '2vw', fontWeight: 'bold', color: 'heading' }}>2.1.2 | Network Configuration Protocol (NETCONF)</Text>
+### 2.1.2 | Network Configuration Protocol (NETCONF)
 
 Das NETCONF-Protokoll ist ein weiterer Schritt in Richtung automatisiertes Netzwerkmonitoring. Das Protokoll basiert auf XML-Files und kann mit sogenannten XML-RPC (Remote Procedure Calls) Daten austauschen. Das Protokoll verfügt über Installations-, Manipulations- und Lösch-Mechanismen für unterstützte Netzwerkkomponenten. Ein großer Vorteil von NETCONF sind die Konfigurationsänderungen durch Transaktionen, an denen mehrere Komponenten beteiligt sein können [7].
 
-<Text style={{ fontSize: '2vw', fontWeight: 'bold', color: 'heading' }}>2.1.3 | Netflow</Text>
+### 2.1.3 | Netflow
 
 Netflow ist eine Technologie, die den Datenfluss eines Netzwerkes überwachen kann. Die Technik bietet statistische Informationen über den Paketfluss unterstützter Netzwerkkomponenten. Wird ein Layer-3-Switch an einem Port mittels Netflow überwacht, so speichert Netflow die Daten im Cache des Switches. Ist der Cache voll oder andere Bedingungen treten ein, so exportiert der Switch die Daten zu einem zentralen Collector, um diese zu persistieren und analysieren [8].
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>2.2 | Überwachung grundlegender Elemente</Text>
+## 2.2 | Überwachung grundlegender Elemente
 
 Grundsätzlich sollte die gesamte Infrastruktur, vor allem im Unternehmenssetting, analysiert und beschrieben werden. Dies bringt nicht nur eine komplette und transparente Übersicht über alle Netzwerkkomponenten, sondern auch, welche Geräte eine unkritische oder kritische Rolle für das Unternehmen spielen. Es hängt natürlich davon ab, welche Dienstleistungen und Produkte ein Unternehmen anbietet, um die Infrastruktur zu klassifizieren [2].
 
@@ -97,7 +97,7 @@ Desktops und Drucker werden eher als unkritisch angesehen, da keine direkten Die
 
 Natürlich hängt es vom Unternehmen und der Branche ab, was als kritisch oder unkritisch anzusehen ist.
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>2.3	| Monitoring-Intervalle</Text>
+## 2.3 | Monitoring-Intervalle
 
 Das Monitoring-Intervall gibt an, wie häufig eine Netzwerkkomponente abgefragt wird. Die Netzwerkkomponenten liefern nach einer definierten Zeit Kennzahlen und Leistungs- und Verfügbarkeitsstatus ab. Grundsätzlich soll für die IT-Komponenten eines Unternehmens ein passendes Monitoring-Intervall gewählt werden, um die Netzwerkauslastung gering zu halten [2].
 
@@ -112,18 +112,18 @@ Folgende Intervallabfragen können als Richtwert angesehen werden [2]:
 
 Kürzere Abfrageintervalle würden das Netzwerk nur unnötig belasten, da nur kritische Aspekte wie Geräteverfügbarkeit von enormer Bedeutung sind [2].
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>2.4	| Kritische Schwellenwerte</Text>
+## 2.4 | Kritische Schwellenwerte
 
 Die Schwellenwerte dienen dazu, um die Netzwerkgeräte und Server proaktiv zu überwachen. Hier können Werte gesetzt werden, um in Extremfällen noch genügend Reaktionszeit zu haben. Üblicherweise ist es möglich, individuelle Schwellenwerte pro Gerät zu setzten. Es können auch Benachrichtigungen (z.B. E-Mails) gesetzt werden, um in Extremfällen rechtzeitig agieren zu können [2].
 
 Zum Beispiel könnte auf einem Server ein Festplattenschwellenwert gesetzt werden. Dieser Wert soll eine 80-prozentige Festplattenauslastung nicht überschreiten, da es sein könnte, dass Daten nicht mehr gespeichert werden können. Somit kann der IT-Administrator oder die IT-Administratorin rechtzeitig reagieren und eine weitere Festplatte installieren, um eine lückenlose Verfügbarkeit gewährleisten zu können.
 
-<Text style={{ fontSize: '4vw', fontWeight: 'bold', color: 'heading' }}>3 | IT Monitoring Lösungen</Text>
+# 3 | IT Monitoring Lösungen
 
 Für das Monitoring von IT-Infrastrukturen und IT-Services gibt es eine Vielzahl von verschiedenen Tools, weshalb nachfolgend nur ein kleiner Ausschnitt gezeigt wird.
 
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>3.1 | Nagios</Text>
+## 3.1 | Nagios
 
 Die Monitoring-Lösung Nagios wurde bereits 1999 veröffentlicht und wird seitdem stetig weiterentwickelt. Auf der offiziellen Website nagios.org werden mittlerweile viele verschiedene Produkte – unter anderem Nagios XI, Nagios Log Server, Nagios Network Analyzer und Nagios Fusion – angeboten. Hierbei sollte allerdings darauf geachtet werden, dass nur die Basisversion „Nagios Core“ kostenlos (im Sinne einer GNU General Public License) ist [9].
 
@@ -134,7 +134,7 @@ Nagios Core selbst inkludiert keine Mechanismen für das Monitoring von Services
 
 Die Plugins dienen demnach als Abstraktionsebene zwischen dem eigentlichen Prozess von Nagios und den zu überwachenden Hosts und Services. Plugins können ausführbare Programme oder Skripts in diversen Programmiersprachen (wie zum Beispiel Perl, PHP oder Python) sein, was den Entwicklerinnen und Entwicklern die Möglichkeit gibt, individuell zugeschnittene Plugins zu erstellen. Für das Überwachen von Standard-Hosts und -Services (z.B. FTP, SMTP und SSH) werden vorgefertigte Plugins zum Download angeboten [10].
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>3.2 | Zabbix</Text>
+## 3.2 | Zabbix
 
 Die Monitoring-Lösung Zabbix wurde von Alexei Vladishev entwickelt und 1998 erstmals veröffentlicht. Aktiv weiterentwickelt und unterstützt wird die Software derzeit von Zabbix SIA/LCC. Zabbix wird unter der GPL General Public License Version 2 entwickelt und vertrieben und kann daher kostenlos verwendet werden [11].
 
@@ -159,7 +159,7 @@ Um den Datenfluss in Zabbix abzubilden, sind darüber hinaus folgende logische E
 
 Zusammenfassend kann gesagt werden, dass sich Zabbix insbesondere durch den optionalen Proxy von Nagios unterscheidet. Durch den Proxy können verteilte Umgebungen einfach realisiert werden, was beispielsweise für ein IT-Dienstleistungsunternehmen zur Überwachung von Kunden-Services vorteilhaft sein kann.
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>3.3 | Checkmk</Text>
+## 3.3 | Checkmk
 
 Eine weitere vergleichbare Lösung für das Service-Monitoring von IT-Infrastruktur ist die von der tribe29 GmbH entwickelte Software Checkmk, welche im Jahr 2008 – und damit gut zehn Jahre nach den anderen beiden Lösungen – erstmals veröffentlicht wurde. Entwickelt wurde Checkmk in den Programmiersprachen C++ und Python [15].
 
@@ -182,11 +182,11 @@ Auch Checkmk verwendet einige Kernelemente und Begriffe, die nachfolgend aufgeli
 
 Im Vergleich zu Nagios und Zabbix wirken die Kernelemente von Checkmk deutlich feingranularer. Das könnte auch damit zu tun haben, dass die Basisversion von Checkmk eben deutlich neuer ist.
 
-<Text style={{ fontSize: '4vw', fontWeight: 'bold', color: 'heading' }}>4 | Praxisbeispiel mittels Checkmk</Text>
+# 4 | Praxisbeispiel mittels Checkmk
 
 Dieses Kapitel zeigt die Umsetzung eines Monitoringsystems mittels Checkmk anhand eines kleinen Praxisbeispiels.
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>4.1 | Infrastruktur</Text>
+## 4.1 | Infrastruktur
 
 Überwacht werden ein zentraler Switch von HP, ein Multifunktionsgerät von Sharp und ein Client-PC der Marke Dell. Während auf dem Client (Betriebssystem: Windows 10) ein Agent installiert werden musste, übermitteln der Switch und der Drucker die Daten bereits standardmäßig per SNMP.
 
@@ -198,11 +198,11 @@ Die nachfolgende Grafik veranschaulicht den Aufbau des Testnetzwerkes.
 
 Wie in der Grafik zu erkennen ist, befinden sich außerdem noch ein weiterer Client und ein Fileserver im Netzwerk. Beide Geräte dienen allerdings nur zum Testen der Switchport-Überwachung und sind selbst nicht in das Monitoringsystem eingebunden.
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>4.2	| Installation von Checkmk mittels Docker</Text>
+## 4.2 | Installation von Checkmk mittels Docker
 
 Die Installation des Checkmk-Servers wurde mit Docker gelöst. Natürlich kann der Server auch nativ auf das Hostsystem (z.B. Debian) installiert werden. Die Lösung mittels Docker ist intuitiv und einfach durchzuführen. Hierbei wird in der Command-Line nur ein Befehl ausgeführt, der die Checkmk-Server-Datei von DockerHub herunterlädt und direkt in einen Docker-Container deployed. Mit diesem Befehl wird nicht nur ein Docker-Container mit Checkmk erstellt, sondern auch ein Webinterface namens cmk eingerichtet und gestartet. Diese Website ist sofort für eine Anmeldung mit dem Standarduser <em>cmkadmin</em> verfügbar [15].
 
-<Text style={{ fontSize: '2vw', fontWeight: 'bold', color: 'heading' }}>Folgender Befehl wurde im Command Line Interface ausgeführt:</Text>
+#### Folgender Befehl wurde im Command Line Interface ausgeführt:
 <br/><br/>
 
 ```
@@ -225,7 +225,7 @@ Da der obenstehende Befehl aus mehreren Parametern besteht, wird nur auf die wic
 
 Wurde der Befehl erfolgreich ausgeführt, kann der Checkmk-Server unter der URL <em>http://localhost:8080/cmk/check_mk/</em> erreicht werden. Die Anmeldedaten findet man beim Starten des Docker-Containers in den dazugehörigen Docker-Logs.
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>4.3	| Einbinden von Hosts</Text>
+## 4.3 | Einbinden von Hosts
 
 Nach dem Einloggen in den Checkmk-Server kommt man auf das Haupt-Dashboard. Hier sind noch keine Monitoring-Services eingetragen. Im nächsten Schritt muss der User zum Reiter Hosts auf der linken Seite navigieren. Wie in der unteren Abbildung ersichtlich, müssen die benötigten Eigenschaften der Netzwerkkomponente eingegeben werden.
 
@@ -239,7 +239,7 @@ Nachdem die Verbindung hergestellt wurde, zeigt Checkmk an, welche Services des 
 ![Übersicht über die überwachten Services](./pictures/test2.png)
 <center>Abbildung 4: Übersicht über die überwachten Services</center><br/>
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>4.4	| Haupt-Dashboard</Text>
+## 4.4 | Haupt-Dashboard
 
 Nachdem die Hosts hinzugefügt wurden, sind die empfangenen SNMP-Daten des Hosts im Haupt-Dashboard ersichtlich.
 Das Dashboard wird in fünf Standardmenüs unterteilt, die natürlich nach belieben geändert werden können.
@@ -253,7 +253,7 @@ Somit liegt beim Standarddashboard der Fokus auf die kritischen Schwellwerte der
 ![Haupt-Dashboard](./pictures/test3.png)
 <center>Abbildung 5: Haupt-Dashboard</center><br/>
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>4.5	| Agentenbasierte Einbindung von Hosts</Text>
+## 4.5 | Agentenbasierte Einbindung von Hosts
 
 Neben der Möglichkeit, Hosts mittels SNMP einzubinden, bietet Checkmk auch die Möglichkeit, einen Agent auf dem Hostsystem zu installieren. In unserem Testnetzwerk wurde noch ein Windows-Client-PC überwacht, der standardmäßig über kein SNMP verfügt. Der Checkmk-Server bietet den Download eines Agents für verschiedene Betriebssysteme an. Unter Windows muss der Client-PC die Agenten.msi-Datei installieren, um mit dem Checkmk-Server kommunizieren zu können. Ist der Agent installiert, muss dieser - wie bereits im Kapitel Einbinden von Hosts – erklärt, mittels Checkmk Agent eingebunden werden. Erkennt der Server den Windows-Client-PC, können nachfolgende PC-Parameter abgefragt werden (siehe Abbildung).
 
@@ -264,7 +264,7 @@ Der Windows-Client-PC liefert Daten wie die Auslastung des C-Laufwerks, CPU-Ausl
 
 Die Agentensoftware von Checkmk steht auch für Linux und Docker zur Verfügung.
 
-<Text style={{ fontSize: '3vw', fontWeight: 'bold', color: 'heading' }}>4.6	| Netzwerkauslastungstest an einem Switch-Interface</Text>
+## 4.6 | Netzwerkauslastungstest an einem Switch-Interface
 
 Der Switch, der im Testnetzwerk vorhanden ist, wurde auch mittels SNMP-Protokoll in Checkmk integriert. Die SNMP-Abfrage liefert die Uptime des Switches und die aktiven Interfaces (Ports).
 
@@ -284,13 +284,13 @@ Im unserem Auslastungstest wurde eine 1 GB und anschließend eine 10 GB große D
 
 Es ist zu erkennen, dass jede Übertragung mitprotokolliert und auch übersichtlich dargestellt wird. Somit ist es jederzeit möglich, zu erkennen, ob es Netzwerkprobleme gibt. Außerdem können sogenannte Bottlenecks erkennt werden, deren Grund in einer Überlastung des Interfaces liegen kann. Obwohl es in unserem Testbeispiel kein Bottleneck gibt, besitzt der Netzwerkadministrator oder die Netzwerkadministratorin nun ein Tool, welches die Fehlersuche enorm erleichtert und bei der proaktiven Erkennung von Bottlenecks helfen kann.
 
-<Text style={{ fontSize: '4vw', fontWeight: 'bold', color: 'heading' }}>5 | Fazit</Text>
+# 5 | Fazit
 
 Im Rahmen der ersten drei Kapitel dieses Blogeintrags erhält die lesende Person einen Kurzüberblick über die wichtigsten Begriffe und Werkzeuge für den Aufbau eines einfachen Monitoring-Systems. Darauf aufbauend erfolgt im vierten Kapitel die Umsetzung anhand eines Praxisbeispiel mit dem Tool Checkmk – einer sehr modernen und leicht aufzusetzenden Monitoring-Software, die noch dazu in einer Open-Source-Version verfügbar ist. Durch den theoretischen und anschließend ebenso praxisnahen Ansatz dieser Arbeit können IT-affine Personen bereits ein gutes Grundverständnis für das Thema Monitoring erwerben und ein einfaches Monitoring-System einrichten.
 
 Dieser Blogeintrag verdeutlicht, dass ein konsistentes Monitoring von IT-Hosts und -Services heutzutage immer wichtiger wird. Insbesondere bei geografisch verteilten Umgebungen und der hybriden Nutzung von lokaler Infrastruktur und Cloudservices kann ein ausgeklügeltes Monitoringsystem sehr hilfreich für das rasche Erkennen und – optimalerweise präventive – Vermeiden von ungewünschten Zuständen sein. Davon profitieren einerseits IT-Administratorinnen und -Administratoren, da diese den Zustand sämtlicher Services in einem übersichtlichen Dashboard sehen können und diese nicht einzeln überwachen müssen und andererseits sämtliche IT-User in einer Organisation, welche von einer beschleunigten Fehlerbehebung und präventiven Maßnahmen – wie etwa einem Festplattenaustausch oder einer Verstärkung des Netzwerks – profitieren. Letztendlich bringt ein gut implementiertes Monitoring einen Vorteil für die gesamte Organisation/das gesamte Unternehmen, welches durch eine effizientere IT wettbewerbsfähiger wird und diese nicht mehr nur als Cost-Center betrachtet.
 
-<Text style={{ fontSize: '4vw', fontWeight: 'bold', color: 'heading' }}>6 | Quellen</Text>
+# 6 | Quellen
 
 [1] 	G. G. a. N. S. J. Hernantes, „IT Infrastructure-Monitoring Tools,“ EEE Software, Nr. vol. 32, no. 4, pp. pp. 88-93, July-Aug. 2015.
 
