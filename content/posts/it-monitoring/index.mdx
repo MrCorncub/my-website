@@ -193,7 +193,6 @@ Dieses Kapitel zeigt die Umsetzung eines Monitoringsystems mittels Checkmk anhan
 Die nachfolgende Grafik veranschaulicht den Aufbau des Testnetzwerkes.
 
 ![Visualisierung der Demoumgebung](./pictures/infrastructure.jpg)
-
 <center>Abbildung 2: Visualisierung der Demoumgebung</center>
 
 Wie in der Grafik zu erkennen ist, befinden sich außerdem noch ein weiterer Client und ein Fileserver im Netzwerk. Beide Geräte dienen allerdings nur zum Testen der Switchport-Überwachung und sind selbst nicht in das Monitoringsystem eingebunden.
@@ -215,7 +214,7 @@ docker container run
 ```
 
 Da der obenstehende Befehl aus mehreren Parametern besteht, wird nur auf die wichtigsten Eigenschaften eingegangen. Die vollständige Erklärung des Befehls findet man auf der Dokumentationswebsite von Checkmk
-(<a href="https://docs.checkmk.com/latest/en/introduction_docker.html" target="_blank">hier klicken</a>).
+([hier klicken](https://docs.checkmk.com/latest/en/introduction_docker.html)).
 
 <ul>
       <li><strong>-p 8080:5000:</strong> Als Standardeinstellung liegt der Checkmk-Server auf Port 8080, der interne Port von Docker benutzt 5000. Diese Porteinstellungen können natürlich je nach Anwendungsfall geändert werden.</li>
@@ -269,7 +268,6 @@ Die Agentensoftware von Checkmk steht auch für Linux und Docker zur Verfügung.
 Der Switch, der im Testnetzwerk vorhanden ist, wurde auch mittels SNMP-Protokoll in Checkmk integriert. Die SNMP-Abfrage liefert die Uptime des Switches und die aktiven Interfaces (Ports).
 
 ![Monitoring eines Netzwerkswitches](./pictures/test5.png)
-
 <center>Abbildung 7: Monitoring eines Netzwerkswitches</center>
 
 Im unserem Auslastungstest wurde eine 1 GB und anschließend eine 10 GB große Datei auf den Fileshare hochgeladen. Der Fileshare ist mit dem Switch auf Interface 7 verbunden. Dabei fungiert der Windows-Client-PC, der auch in Checkmk eingebunden wurde, als Uploader der Dateien.
