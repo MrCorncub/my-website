@@ -2,3 +2,5 @@ User-agent: *
 Disallow:
 
 Sitemap: https://bebner.eu/sitemap-index.xml
+Sitemap: https://bebner.eu/rss.xml
+Sitemap: https://bebner.eu/sitemap-0.xml
