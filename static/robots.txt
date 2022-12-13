@@ -1,8 +1,4 @@
 User-agent: *
-<<<<<<< HEAD
 Disallow:
-Sitemap: https://bebner.eu/rss.xml
-=======
 
-sitemap: https://minimal-blog.lekoarts.de/sitemap-index.xml
->>>>>>> upstream/master
+Sitemap: https://bebner.eu/sitemap-index.xml
