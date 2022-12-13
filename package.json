@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^6.0.0",
+    "@lyket/react": "^1.4.8",
     "gatsby": "^5.0.0",
     "gatsby-plugin-feed": "^5.0.0",
     "gatsby-plugin-manifest": "^5.0.0",

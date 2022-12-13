@@ -10,6 +10,51 @@ tags:
 slug: "/blog/it-monitoring"
 ---
 
+import { Provider, LikeButton } from "@lyket/react";
+
+<div class="img_container" style={{
+display : 'flex',
+justifyContent : 'center',
+boxShadow: '0px 0px 10px #ffd665'
+}}>
+    <div
+        style={{
+              height: 'auto',
+              maxWidth: '70%',
+              marginRight: '10px',
+              marginTop: '20px',
+              marginBottom: '20px'
+              }}> <p style={{ 
+                textAlign: 'center',
+                  marginTop: '10px'
+                  }}> 
+                    ##### Gefällt dir dieser Beitrag? ➔
+                  </p>
+      </div>
+    <div
+        style={{
+              height: 'auto',
+              Width: 'auto',
+              borderRadius: '50%',
+              marginTop: '20px',
+              marginBottom: '20px'
+              }}> 
+              <div style={{ 
+                textAlign: 'center',
+                fontSize: '1.17em'
+                }}>              
+                <Provider apiKey="pt_1001ee5782af406d9e47a1994b7979">
+                    <LikeButton
+                    namespace="itmonitor"
+                    id="like2"
+                    hideCounterIfLessThan="10"
+                    component={LikeButton.templates.Twitter}
+                    />
+              </Provider>  
+              </div>
+              </div>
+</div>
+
 # 1 | Einleitung IT Monitoring
 
 Die Bereitstellung von neuer Software bzw. neuer Services in der IT ist leichter denn je. Konzepte wie Cloud-Computing,
