@@ -10,7 +10,10 @@ slug: "/blog/spotify-playlisten"
 ---
 
 import { Provider, LikeButton } from "@lyket/react";
+import ReactDisqusComments from 'react-disqus-comments';
+import LazyLoad from 'react-lazy-load';
 
+<script>
 <div class="img_container" style={{
 display : 'flex',
 justifyContent : 'center',
@@ -48,6 +51,7 @@ boxShadow: '0px 0px 10px #bfbfbf'
               </div>
               </div>
 </div>
+</script>
 
 ![Spotify Logo](./spotify-logo.png)
 
@@ -99,3 +103,15 @@ width="100%" height="380" frameBorder="0"
 allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media;
 fullscreen; picture-in-picture">
 </iframe>
+
+<br></br>
+<hr/>
+<br></br>
+<LazyLoad offsetTop={400}>
+<ReactDisqusComments
+        shortname="bebner"
+        identifier="spotify"
+        title="Spotify-Playlisten, die Seinesgleichen suchen"
+        url="https://bebner.eu/blog/spotify-playlisten"
+/>
+</LazyLoad>

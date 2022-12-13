@@ -1,0 +1,37 @@
+<div class="img_container" style={{
+display : 'flex',
+justifyContent : 'center',
+boxShadow: '0px 0px 10px #bfbfbf'
+}}>
+    <div
+        style={{
+              height: 'auto',
+              maxWidth: '70%',
+              marginTop: '20px',
+              marginBottom: '20px'
+              }}>
+                    ##### Gefällt dir dieser Beitrag? &nbsp; ➜
+      </div>
+    <div
+        style={{
+              height: 'auto',
+              Width: 'auto',
+              borderRadius: '50%',
+              marginTop: '20px',
+              marginBottom: '20px'
+              }}> 
+              <div style={{ 
+                textAlign: 'center',
+                fontSize: '1.17em'
+                }}>              
+                <Provider apiKey="pt_1001ee5782af406d9e47a1994b7979">
+                    <LikeButton
+                    namespace="spotify"
+                    id="like1"
+                    hideCounterIfLessThan="10"
+                    component={LikeButton.templates.Twitter}
+                    />
+              </Provider>  
+              </div>
+              </div>
+</div>

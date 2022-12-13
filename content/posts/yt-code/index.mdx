@@ -14,46 +14,9 @@ slug: "/blog/youtube-video"
   tempemail-lyket
 </script>
 
-import { Provider, LikeButton } from "@lyket/react";
 
-<div class="img_container" style={{
-display : 'flex',
-justifyContent : 'center',
-boxShadow: '0px 0px 10px #bfbfbf'
-}}>
-    <div
-        style={{
-              height: 'auto',
-              maxWidth: '70%',
-              marginRight: '0px',
-              marginTop: '20px',
-              marginBottom: '20px'
-              }}>
-                    ##### Gefällt dir dieser Beitrag? &nbsp; ➜
-      </div>
-    <div
-        style={{
-              height: 'auto',
-              Width: 'auto',
-              borderRadius: '50%',
-              marginTop: '20px',
-              marginBottom: '20px'
-              }}> 
-              <div style={{ 
-                textAlign: 'center',
-                fontSize: '1.17em'
-                }}>              
-                <Provider apiKey="pt_1001ee5782af406d9e47a1994b7979">
-                    <LikeButton
-                    namespace="youtube"
-                    id="like3"
-                    hideCounterIfLessThan="10"
-                    component={LikeButton.templates.Twitter}
-                    />
-              </Provider>  
-              </div>
-              </div>
-</div>
+import ReactDisqusComments from 'react-disqus-comments';
+import LazyLoad from 'react-lazy-load';
 
 ![Youtube Logo](./yt-logo_new.jpg)
 
@@ -121,3 +84,16 @@ Um zu zeigen, dass der Code auch funktioniert, habe ich noch ein Video eingebett
 Credits:
 [Blog Eintrag](https://dev.to/dance2die/youtube-iframe-api-yt-player-is-not-a-constructor-pa6),
 [Youtube iFrame API](https://developers.google.com/youtube/iframe_api_reference?hl=de)
+
+<br></br>
+<hr/>
+<br></br>
+<LazyLoad offset={1000}>
+<ReactDisqusComments
+        shortname="bebner"
+        identifier="youtube"
+        title="Youtube-Videos in die eigene Website einbinden"
+        url="https://bebner.eu/blog/youtube-video"
+/>
+</LazyLoad>
+
