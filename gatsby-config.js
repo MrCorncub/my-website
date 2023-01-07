@@ -13,7 +13,7 @@ module.exports = {
     siteTitle: `Bernhard Ebner`,
     siteTitleAlt: `Bernhard Ebner`,
     siteHeadline: `Bernhard Ebner`,
-    siteUrl: `https://bebner.eu`,
+    siteUrl: `https://www.bebner.eu`,
     siteDescription: `Ich bin Bernhard Ebner und Informatikstudent. Diese Webpage erzählt das Wichtigste über mich und was mich gerade in der IT-Welt bewegt.`,
     siteLanguage: `de`,
     siteImage: `/banner.jpg`,
