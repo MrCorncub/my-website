@@ -1,11 +1,19 @@
 import * as React from "react"
 import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout"
 
-const NotFound = () => (
-  <Layout>
-    <h1>404 - Page Not Found</h1>
-    <p>Oje, anscheinend hat Bernhard was falsch gemacht, das gibt Kaffeeverbot! :( </p>
-  </Layout>
-)
 
-export default NotFound
+const browser = typeof window !== "undefined" && window;
+
+const NotFoundPage = () => {
+  return (
+    browser && (
+      <Layout>
+      <div>
+        <h1>404 Error content...</h1>
+      </div>
+      </Layout>
+    )
+  );
+};
+
+export default NotFoundPage;
