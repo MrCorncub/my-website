@@ -27,7 +27,9 @@
     "react": "^18.2.0",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^18.2.0",
-    "react-lazy-load": "^4.0.1"
+    "react-lazy-load": "^4.0.1",
+    "react-shuffle-text": "^1.0.6",
+    "react-type-animation": "^3.1.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"

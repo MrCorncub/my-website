@@ -1,11 +1,27 @@
+import { TypeAnimation } from 'react-type-animation';
+
 <link rel="prefetch" href="/me_memoji.png" />
 
 <div class="img_container" style={{display: 'flex', alignItems: 'center'}}>
     <div>
-        <b style={{fontSize: 'calc(4vw + 1vh + 1vmin)'}}>Servus.👋 </b>
+        <TypeAnimation
+            sequence={[
+            'Servus.👋',
+             5000,
+             'Hallo.👋',
+             5000,
+             'Griaß di.👋',
+             5000,
+         ]}
+             wrapper="span"
+             speed={10}
+             style={{fontSize: 'calc(4vw + 1vh + 1vmin)', fontWeight:'bold'}}
+             repeat={Infinity}
+             preRenderFirstString={true}
+          />
 
-        Ich bin <b>Bernhard Ebner</b> und <b>Informatikstudent</b>.
-        Diese Webpage erzählt das Wichtigste über mich und was mich gerade in der IT-Welt bewegt.
+    Ich bin <b>Bernhard Ebner</b> und <b>Informatikstudent</b>.
+    Diese Webpage erzählt das Wichtigste über mich und was mich gerade in der IT-Welt bewegt.
 
     </div>
     <img alt="Me,Myself and I" src="/me_memoji.png"
