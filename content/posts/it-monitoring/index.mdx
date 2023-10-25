@@ -27,13 +27,12 @@ um sicherzustellen, dass alle (Produktiv-)Systeme durchgehend erreichbar sowie f
 Netzwerkkomponenten wie Router, virtuelle Maschinen, Server und Firewalls sollen hinsichtlich ihrer Verfügbarkeit,
 Leistung und eventueller Fehler überwacht werden, um so eine proaktive Fehlerbehebung zu gewährleisten [2].
 
-Folgende Aspekte sind grundlegend, um IT Monitoring umsetzen zu können [2]: <br/>
-<ul>
-      <li>Auswahl der Protokolle (z.B. SNMP - siehe Kapitel 2.1.1)</li>
-      <li>Definition der zu überwachenden Elemente</li>
-      <li>Definition der Monitoring-Intervalle</li>
-      <li>Definitionen der Schwellwerte (kritischen Systemwerte)</li>
-</ul>
+Folgende Aspekte sind grundlegend, um IT Monitoring umsetzen zu können [2]:
+
+- Auswahl der Protokolle (z.B. SNMP - siehe Kapitel 2.1.1)
+- Definition der zu überwachenden Elemente
+- Definition der Monitoring-Intervalle
+- Definitionen der Schwellwerte (kritischen Systemwerte)
 
 Viele Unternehmen müssen rund um die Uhr sicherstellen, dass ihre Systeme hochverfügbar sind.
 Deswegen ist es für (IT-)Unternehmen extrem wichtig, sich mit IT Monitoring auseinanderzusetzen.
@@ -107,11 +106,11 @@ Das Monitoring-Intervall gibt an, wie häufig eine Netzwerkkomponente abgefragt 
 Welches Intervall passend ist, hängt von den Netzwerkparametern (Services), deren eventuell kritische Funktion und Art des Netzwerkgerätes ab. Auch hängt es vom Monitoring-Management-System ab, welche Intervalle es für bestimmte Geräte unterstützt [2].
 
 Folgende Intervallabfragen können als Richtwert angesehen werden [2]:
-<ul>
-      <li>Geräteverfügbarkeitsabfrage im Minutentakt</li>
-      <li>CPU- und Speicherstatistikabfragen alle fünf Minuten</li>
-      <li>Festplattenauslastung alle 15 Minuten</li>
-</ul>
+
+- Geräteverfügbarkeitsabfrage im Minutentakt
+- CPU- und Speicherstatistikabfragen alle fünf Minuten
+- Festplattenauslastung alle 15 Minuten
+
 
 Kürzere Abfrageintervalle würden das Netzwerk nur unnötig belasten, da nur kritische Aspekte wie Geräteverfügbarkeit von enormer Bedeutung sind [2].
 
@@ -143,22 +142,22 @@ Die Monitoring-Lösung Zabbix wurde von Alexei Vladishev entwickelt und 1998 ers
 
 Die Architektur von Zabbix besteht aus einigen wichtigen Softwarekomponenten, welche in der nachfolgenden Auflistung kurz erklärt werden [12]:
 
-<ul>
-      <li><strong>Server:</strong> Der Zabbix-Server ist die zentrale Komponente in der Architektur. Er dient als zentraler Speicherort für sämtliche Konfigurations- und Betriebsdaten und für Statistiken.</li>
-      <li><strong>Agents:</strong> Agents sind kleine Programme, welche auf den zu überwachenden Systemen installiert werden und die aktive Ressourcen- und Applikationsüberwachung übernehmen. Die gesammelten Daten werden an den Server übermittelt. </li>
-      <li><strong>Webinterface:</strong> Für den standort- und plattformunabhängigen Zugriff inkludiert der Zabbix Server ein webbasiertes Interface, welches üblicherweise auf demselben physischen Gerät gehostet wird.</li>
-      <li><strong>Proxy:</strong> Der Zabbix-Proxy ist ein optionaler Teil der Architektur und kann gesammelte Monitoring-Daten in verteilten Umgebungen entgegennehmen und diese anschließend gesammelt an den Server übermitteln.</li>
-</ul>
+
+- <strong>Server:</strong> Der Zabbix-Server ist die zentrale Komponente in der Architektur. Er dient als zentraler Speicherort für sämtliche Konfigurations- und Betriebsdaten und für Statistiken.
+- <strong>Agents:</strong> Agents sind kleine Programme, welche auf den zu überwachenden Systemen installiert werden und die aktive Ressourcen- und Applikationsüberwachung übernehmen. Die gesammelten Daten werden an den Server übermittelt.
+- <strong>Webinterface:</strong> Für den standort- und plattformunabhängigen Zugriff inkludiert der Zabbix Server ein webbasiertes Interface, welches üblicherweise auf demselben physischen Gerät gehostet wird.
+- <strong>Proxy:</strong> Der Zabbix-Proxy ist ein optionaler Teil der Architektur und kann gesammelte Monitoring-Daten in verteilten Umgebungen entgegennehmen und diese anschließend gesammelt an den Server übermitteln.
+
 
 Um den Datenfluss in Zabbix abzubilden, sind darüber hinaus folgende logische Elemente von Bedeutung [13]:
 
-<ul>
-      <li><strong>Host:</strong> Hosts sind Netzwerkgeräte mit einer eigenen IP-Adresse und/oder einem eigenen vollständig qualifiziertem Domainnamen. </li>
-      <li><strong>Item:</strong> Items repräsentieren spezielle Parameter/Eigenschaften von Hosts, welche überwacht werden sollten (z.B. die CPU-Auslastung eines Computers). </li>
-      <li><strong>Trigger:</strong> Trigger definieren einen Schwellwert für Items und ändern ihren Status, wenn der Schwellwert überschritten wurde. </li>
-      <li><strong>Event:</strong> Wenn sich der Zustand eines Triggers verändert, wird ein Event (= Ereignis) ausgelöst.</li>
-      <li><strong>Actions:</strong> Actions definieren, wie auf das Auslösen eines Events reagiert werden soll. Das könnte zum Beispiel das Senden einer E-Mail sein.</li>
-</ul>
+
+- <strong>Host:</strong> Hosts sind Netzwerkgeräte mit einer eigenen IP-Adresse und/oder einem eigenen vollständig qualifiziertem Domainnamen.
+- <strong>Item:</strong> Items repräsentieren spezielle Parameter/Eigenschaften von Hosts, welche überwacht werden sollten (z.B. die CPU-Auslastung eines Computers).
+- <strong>Trigger:</strong> Trigger definieren einen Schwellwert für Items und ändern ihren Status, wenn der Schwellwert überschritten wurde. 
+- <strong>Event:</strong> Wenn sich der Zustand eines Triggers verändert, wird ein Event (= Ereignis) ausgelöst.
+- <strong>Actions:</strong> Actions definieren, wie auf das Auslösen eines Events reagiert werden soll. Das könnte zum Beispiel das Senden einer E-Mail sein.
+
 
 Zusammenfassend kann gesagt werden, dass sich Zabbix insbesondere durch den optionalen Proxy von Nagios unterscheidet. Durch den Proxy können verteilte Umgebungen einfach realisiert werden, was beispielsweise für ein IT-Dienstleistungsunternehmen zur Überwachung von Kunden-Services vorteilhaft sein kann.
 
@@ -170,18 +169,16 @@ Neben der Open-Source-Version „Checkmk Raw Edition (CRE)“ gibt es noch die k
 
 Auch Checkmk verwendet einige Kernelemente und Begriffe, die nachfolgend aufgelistet werden [15]:
 
-<ul>
-      <li><strong>Events:</strong> In der Dokumentation von Checkmk wird erklärt, dass die meisten Monitoring-Lösungen ereignisbasiert arbeiten. Events sind einzigartige Geschehnisse, die zu einem bestimmten Zeitpunkt auftreten.</li>
-      <li><strong>States:</strong> Im Gegensatz zu den Events beschreiben Zustände anhaltende Situationen. Beispiel: „AccessPoint 1 ist online“. Um den Zustand bewerten zu können, muss das Monitoring-System den AccessPoint regelmäßig abfragen. Checkmk beherrscht Events und States, bevorzugt jedoch aus verschiedenen Gründen die States.</li>
-      <li><strong>Hosts:</strong> Laut der Checkmk-Dokumentation handelt es sich bei Hosts primär um Netzwerkgeräte wie zum Beispiel Server, Switches, Router und sonstige IP-fähige Netzwerkgeräte. </li>
-      <li><strong>Parents:</strong> Bei jedem Host können ein oder mehrere Parent-Hosts angegeben werden, wodurch Checkmk in der Lage ist, eine baumartige Host-Struktur abzuleiten. Mithilfe dieser Struktur kann Checkmk beispielsweise erkennen, dass mehrere Hosts, bedingt durch den Ausfall eines zentralen Switches, nicht mehr erreichbar sind. Dadurch können Fehlalarme vermieden werden. </li>
-      <li><strong>Services:</strong> Auf jedem Host gibt es eine Menge von Services. Services sind wesentliche Teile und Eigenschaften des Hosts, die überwacht werden können. Bei einem Switch sind beispielsweise sowohl die Uptime des Gerätes als auch jedes einzelne Netzwerkinterface als eigener Service zu betrachten. </li>
-      <li><strong>Contacts</strong> und <strong>Contact Groups:</strong> Durch die Verwendung von Kontakten und Kontaktgruppen können Hosts und Services Personen zugeordnet werden.</li>
-      <li><strong>Users</strong> und <strong>Roles:</strong> In Verbindung mit den Kontakten und Kontaktgruppen wird über Benutzer und Rollen gesteuert, welche Personen für bestimmte Hosts oder Services zuständig sind. Checkmk kommt mit den Standardrollen „admin“, „user“ und „guest“.</li>
-      <li><strong>Problems:</strong> Alle Hosts und Services, die sich nicht im gewünschten Zustand befinden, werden nach Checkmk-Terminologie als „Problem“ bezeichnet. </li>
-      <li><strong>Notifications:</strong> Immer, wenn sich der State eines Service ändert, spricht man bei Checkmk von einem Monitoring-Event. Üblicherweise generieren solche Events eine Benachrichtigung in Form einer E-Mail an den verknüpften Contact.</li>
-      <li><strong>Time Periods:</strong> Eine Zeitperioden kann festgelegt werden, innerhalb welcher Zeitspanne die Überwachung und eine allfällige Benachrichtigung erfolgen soll.</li>
-</ul>
+- <strong>Events:</strong> In der Dokumentation von Checkmk wird erklärt, dass die meisten Monitoring-Lösungen ereignisbasiert arbeiten. Events sind einzigartige Geschehnisse, die zu einem bestimmten Zeitpunkt auftreten.
+- <strong>States:</strong> Im Gegensatz zu den Events beschreiben Zustände anhaltende Situationen. Beispiel: „AccessPoint 1 ist online“. Um den Zustand bewerten zu können, muss das Monitoring-System den AccessPoint regelmäßig abfragen. Checkmk beherrscht Events und States, bevorzugt jedoch aus verschiedenen Gründen die States.
+- <strong>Hosts:</strong> Laut der Checkmk-Dokumentation handelt es sich bei Hosts primär um Netzwerkgeräte wie zum Beispiel Server, Switches, Router und sonstige IP-fähige Netzwerkgeräte. 
+- <strong>Parents:</strong> Bei jedem Host können ein oder mehrere Parent-Hosts angegeben werden, wodurch Checkmk in der Lage ist, eine baumartige Host-Struktur abzuleiten. Mithilfe dieser Struktur kann Checkmk beispielsweise erkennen, dass mehrere Hosts, bedingt durch den Ausfall eines zentralen Switches, nicht mehr erreichbar sind. Dadurch können Fehlalarme vermieden werden. 
+- <strong>Services:</strong> Auf jedem Host gibt es eine Menge von Services. Services sind wesentliche Teile und Eigenschaften des Hosts, die überwacht werden können. Bei einem Switch sind beispielsweise sowohl die Uptime des Gerätes als auch jedes einzelne Netzwerkinterface als eigener Service zu betrachten. 
+- <strong>Contacts</strong> und <strong>Contact Groups:</strong> Durch die Verwendung von Kontakten und Kontaktgruppen können Hosts und Services Personen zugeordnet werden.
+- <strong>Users</strong> und <strong>Roles:</strong> In Verbindung mit den Kontakten und Kontaktgruppen wird über Benutzer und Rollen gesteuert, welche Personen für bestimmte Hosts oder Services zuständig sind. Checkmk kommt mit den Standardrollen „admin“, „user“ und „guest“.
+- <strong>Problems:</strong> Alle Hosts und Services, die sich nicht im gewünschten Zustand befinden, werden nach Checkmk-Terminologie als „Problem“ bezeichnet.
+- <strong>Notifications:</strong> Immer, wenn sich der State eines Service ändert, spricht man bei Checkmk von einem Monitoring-Event. Üblicherweise generieren solche Events eine Benachrichtigung in Form einer E-Mail an den verknüpften Contact.
+- <strong>Time Periods:</strong> Eine Zeitperioden kann festgelegt werden, innerhalb welcher Zeitspanne die Überwachung und eine allfällige Benachrichtigung erfolgen soll.
 
 Im Vergleich zu Nagios und Zabbix wirken die Kernelemente von Checkmk deutlich feingranularer. Das könnte auch damit zu tun haben, dass die Basisversion von Checkmk eben deutlich neuer ist.
 
@@ -219,11 +216,9 @@ docker container run
 Da der obenstehende Befehl aus mehreren Parametern besteht, wird nur auf die wichtigsten Eigenschaften eingegangen. Die vollständige Erklärung des Befehls findet man auf der Dokumentationswebsite von Checkmk
 ([hier klicken](https://docs.checkmk.com/latest/en/introduction_docker.html)).
 
-<ul>
-      <li><strong>-p 8080:5000:</strong> Als Standardeinstellung liegt der Checkmk-Server auf Port 8080, der interne Port von Docker benutzt 5000. Diese Porteinstellungen können natürlich je nach Anwendungsfall geändert werden.</li>
-      <li><strong>--name monitoring:</strong> Dieser Befehl gibt den Namen des Docker-Containers an, der eindeutig sein muss.</li>
-      <li><strong>checkmk/check-mk-raw:2.0.0-latest:</strong> Die Bezeichnung des Checkmk-Images, das heruntergeladen wird.</li>
-</ul>
+- <strong>-p 8080:5000:</strong> Als Standardeinstellung liegt der Checkmk-Server auf Port 8080, der interne Port von Docker benutzt 5000. Diese Porteinstellungen können natürlich je nach Anwendungsfall geändert werden.
+- <strong>--name monitoring:</strong> Dieser Befehl gibt den Namen des Docker-Containers an, der eindeutig sein muss.
+- <strong>checkmk/check-mk-raw:2.0.0-latest:</strong> Die Bezeichnung des Checkmk-Images, das heruntergeladen wird.
 
 Wurde der Befehl erfolgreich ausgeführt, kann der Checkmk-Server unter der URL <em>http://localhost:8080/cmk/check_mk/</em> erreicht werden. Die Anmeldedaten findet man beim Starten des Docker-Containers in den dazugehörigen Docker-Logs.
 
@@ -275,10 +270,10 @@ Der Switch, der im Testnetzwerk vorhanden ist, wurde auch mittels SNMP-Protokoll
 
 Im unserem Auslastungstest wurde eine 1 GB und anschließend eine 10 GB große Datei auf den Fileshare hochgeladen. Der Fileshare ist mit dem Switch auf Interface 7 verbunden. Dabei fungiert der Windows-Client-PC, der auch in Checkmk eingebunden wurde, als Uploader der Dateien.
 
-<ul>
-      <li><strong>1 GB Datei:</strong> Um 11:49 begann der Upload und endete um 11:52. Im grünen Bereich des Graphen sieht man auf der y-Achse die Auslastung des Interfaces, welche bei 80 Mbit/s ihr Maximum erreicht hat.</li>
-      <li><strong>10 GB Datei:</strong> Um 11:55 begann der Upload und endete um ca. 12:02. Dabei ist zu erkennen, dass das Switch-Interface erst bei der halben Uploadzeit die Übertragung erhöhte. Die maximale Übertragungsrate betrug dabei ca. 200 Mbit/s.</li>
-</ul>
+
+- <strong>1 GB Datei:</strong> Um 11:49 begann der Upload und endete um 11:52. Im grünen Bereich des Graphen sieht man auf der y-Achse die Auslastung des Interfaces, welche bei 80 Mbit/s ihr Maximum erreicht hat.
+- <strong>10 GB Datei:</strong> Um 11:55 begann der Upload und endete um ca. 12:02. Dabei ist zu erkennen, dass das Switch-Interface erst bei der halben Uploadzeit die Übertragung erhöhte. Die maximale Übertragungsrate betrug dabei ca. 200 Mbit/s.
+
 
 ![Monitoring der Auslastung eines einzelnen Interfaces](./pictures/test6.png)
 <center>Abbildung 8: Monitoring der Auslastung eines einzelnen Interfaces an einem Switch</center>
