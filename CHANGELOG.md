@@ -1,5 +1,23 @@
 # Change Log
 
+## 1.3.16
+
+### Patch Changes
+
+- [`409bba45`](https://github.com/LekoArts/gatsby-themes/commit/409bba451d8637d04de2efc8199fa662a2595c68) Thanks [@LekoArts](https://github.com/LekoArts)! - Remove link to my Patreon page. To simplify things I disabled my Patreon. If you want to support my OSS work, please consider using GitHub sponsors or Ko-fi. Thanks!
+
+- Updated dependencies [[`409bba45`](https://github.com/LekoArts/gatsby-themes/commit/409bba451d8637d04de2efc8199fa662a2595c68)]:
+  - @lekoarts/gatsby-theme-minimal-blog@6.2.1
+
+## 1.3.15
+
+### Patch Changes
+
+- [#1116](https://github.com/LekoArts/gatsby-themes/pull/1116) [`cf7d5122`](https://github.com/LekoArts/gatsby-themes/commit/cf7d51223a73387f12cac490e2a42f068b0ded26) Thanks [@LekoArts](https://github.com/LekoArts)! - chore(deps): Various dependency updates
+
+- Updated dependencies [[`cf7d5122`](https://github.com/LekoArts/gatsby-themes/commit/cf7d51223a73387f12cac490e2a42f068b0ded26)]:
+  - @lekoarts/gatsby-theme-minimal-blog@6.0.5
+
 ## 1.3.14
 
 ### Patch Changes

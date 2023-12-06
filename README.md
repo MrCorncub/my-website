@@ -40,9 +40,13 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 - SEO (Sitemap, OpenGraph tags, Twitter tags)
 - WebApp Manifest
 
-## 🚀 Getting Started
+## ⏱️ Quick Start
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/LekoArts/gatsby-starter-minimal-blog)
+Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+
+[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-minimal-blog)
+
+## 🚀 Getting Started
 
 ### 1. **Create a Gatsby site.**
 
@@ -222,4 +226,4 @@ To learn more about Gatsby themes specifically, I recommend checking out the [th
 
 Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
 
-Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!
+Please star this project, share it on Social Media or consider supporting me on [GitHub Sponsors](https://github.com/sponsors/LekoArts)!
