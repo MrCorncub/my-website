@@ -9,17 +9,84 @@ tags:
   - iframe
 slug: "/blog/youtube-video"
 ---
-# Liebe Julia,
 
-Ich hoffe diese Nachricht erreicht dich mit einem Lächeln. 💖 Die Tage sind einfach heller, wenn ich an dich denke. Dein Lächeln ist wie ein Sonnenstrahl in meiner Welt, und deine Anwesenheit erhellt meine dunkelsten Tage.
+import ReactDisqusComments from 'react-disqus-comments';
+import LazyLoad from 'react-lazy-load';
 
-Du bist für mich mehr als Worte ausdrücken können. Deine Liebe hat mein Herz erobert und lässt es schneller schlagen. Mit dir fühle ich mich vollständig und glücklich.
+![Youtube Logo](./yt-logo_new.jpg)
 
-In jeder Umarmung finde ich Geborgenheit, und in jedem Blick verliere ich mich in deinen Augen. Du bist das Beste, was mir je passiert ist, und ich bin so dankbar, dich an meiner Seite zu wissen.
+Youtube stellt mit der Youtube-iFrame API die Möglichkeit bereit, Youtube-Videos in die eigene Website einzubetten.
+Der Code ist straight-forward und benötigt nicht viel Zeit, um ihn zu implementieren. Die Dokumentation befindet sich [hier](https://developers.google.com/youtube/iframe_api_reference?hl=de).
 
-Mit jeder Sekunde, die vergeht, wächst meine Liebe zu dir. Ich freue mich auf die vielen Abenteuer, die noch vor uns liegen, und darauf, jede Höhe und Tiefe des Lebens mit dir zu teilen.
+Es geht auch einfacher, indem ein iFrame-Element benutzt wird. Dieses Element bekommt das Attribut src, dass den Youtube-Link beinhalten soll.
 
-Du bist meine Sonne, mein Mond und alle Sterne. Ich liebe dich mehr als Worte sagen können.
+```html
+<iframe id="player"
+     src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
+     frameborder="0"
+></iframe>
+```
 
-Für immer deine,
-Berni 
+Soweit so gut, jedoch gibt es noch ein einziges Problem. Das iframe-Element ist nicht responsive/dynamisch. Das Element soll sich automatisch
+auf die Bildschirmbreite anpassen, das es zur Zeit nicht tut. Hier kommt CSS ins Spiel, dass den Style des Elements vorgibt und dafür sorgt, dass das Design
+am Smartphone oder Computer gleich aussieht.
+
+```html
+<div class="videoWrapper" style="
+        position: relative;
+       	padding-bottom: 56.25%; /* Erzeugt einen Platzhalter für das responsive Video - 56,25% entsprechen dem Seitenverhältnis 16:9 */
+        ">
+
+  <iframe id="player"
+        src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
+        frameborder="0"
+        style="
+            position: absolute;
+            width: 100%;
+            height: 100%;">
+  </iframe>
+</div>
+```
+
+Falls du es selbst ausprobieren möchtest und keine Website zur Verfügung hast, kannst du in dieser [Sandbox-Umgebung](https://jsfiddle.net/omarjuvera/8zkunqxy/2/) den Code testen und verändern.
+
+
+Um zu zeigen, dass der Code auch funktioniert, habe ich noch ein Video eingebettet. <Text sx={{ fontSize: [1, 2, 2], fontWeight: `bold`, color: `heading` }}>Viel Spaß!</Text>
+
+<div class="videoWrapper" style={{
+        position: 'relative',
+       	paddingBottom: '56.25%',
+       	paddingTop: '25px'}}>
+
+  <iframe id="player"
+        src="https://www.youtube.com/embed/NUYvbT6vTPs?enablejsapi=1&origin=http://example.com"
+        frameborder="0"
+        style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%'}}>
+  </iframe>
+</div>
+
+<br/>
+Credits:
+[Blog Eintrag](https://dev.to/dance2die/youtube-iframe-api-yt-player-is-not-a-constructor-pa6),
+[Youtube iFrame API](https://developers.google.com/youtube/iframe_api_reference?hl=de)
+
+<br></br>
+<hr/>
+<br></br>
+<center>
+<div style={{backgroundColor: '#ffffff', width: '100%', borderRadius:'2%'}}>
+<div style={{backgroundColor: '#ffffff', width: '90%', maring:'0 auto', display: 'table', borderRadius:'2%'}}>
+<LazyLoad offset={1000}>
+    <ReactDisqusComments
+            shortname="bebner"
+            identifier="youtube"
+            title="Youtube-Videos in die eigene Website einbinden"
+            url="https://www.bebner.eu/blog/youtube-video"
+    />
+</LazyLoad>
+</div>
+</div>
+</center>
